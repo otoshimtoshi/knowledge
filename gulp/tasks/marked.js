@@ -9,7 +9,7 @@ const markdown = require('../gulp-markdown-it/index');
 const md = require('markdown-it');
 const footnote = require('markdown-it-footnote');
 const mark = require('markdown-it-mark');
-const additionalClass = require('../gulp-markdown-it/plugins/additionalClass');
+const addClass = require('gulp-markdown-it-addClass');
 
 const hljs = require('highlight.js');
 
@@ -46,6 +46,6 @@ const options = {
 
 const config = {
   options: options,
-  plugins: [ footnote, mark, additionalClass ]
+  plugins: [ footnote, mark, addClass ]
 }
 

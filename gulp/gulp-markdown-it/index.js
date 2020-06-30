@@ -1,7 +1,7 @@
 const PluginError = require('plugin-error')
 const through = require('through2')
 
-const PLUGIN_NAME = 'gulp-markdownit'
+const PLUGIN_NAME = 'gulp-markdown-it'
 
 const useMarkdownItPlugin = (md, plugin) => {
   if (typeof plugin === 'string' || plugin instanceof String) {
