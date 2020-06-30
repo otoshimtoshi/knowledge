@@ -15,6 +15,5 @@ gulp.task('build', gulp.series(
   'cleanDest',
   gulp.parallel('marked','sass'),
   'cleanBuild',
-  'replaceHtml',
   'cleanCss'
 ));

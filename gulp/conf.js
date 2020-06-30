@@ -7,15 +7,12 @@ const DIR = module.exports.DIR =  {
   DEST: 'dst',
   BUILD: 'docs'
 };
-const WEBPACK_CONFIG = {
-  NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-};
 
 module.exports.serve = {
   dest: {
-    // notify: false,
+    notify: false,
     startPath: `${DIR.PATH}/`,
-    // ghostMode: false,
+    ghostMode: false,
     server: {
       baseDir: DIR.DEST,
       index: 'index.html',
@@ -46,7 +43,10 @@ module.exports.md = {
     `!${DIR.SRC}/**/_**/*.md`,
     `!${DIR.SRC}/**/_*.md`
   ],
-  dest: `${DIR.DEST}`
+  dest: `${DIR.DEST}`,
+  opts: {
+    pretty: true
+  }
 };
 
 module.exports.sass = {
