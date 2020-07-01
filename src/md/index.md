@@ -1,10 +1,8 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-</head>
-
 ## Heading
+
 **Example**
-``` text
+
+```text
 # h1 Heading
 ## h2 Heading
 ### h3 Heading
@@ -12,68 +10,90 @@
 ##### h5 Heading
 ###### h6 Heading
 ```
+
 # h1 Heading
+
 ## h2 Heading
+
 ### h3 Heading
+
 #### h4 Heading
+
 ##### h5 Heading
+
 ###### h6 Heading
 
-___
+---
 
 ## Horizontal
+
 **Example**
-``` text
+
+```text
 ___
 ---
 ***
 ```
-___
+
 ---
-***
+
+---
+
+---
 
 ## Typographic replacements
+
 **Example**
-``` text
+
+```text
 (c) (C) (r) (R) (tm) (TM) (p) (P) +-
 ```
+
 (c) (C) (r) (R) (tm) (TM) (p) (P) +-
 
-
 ## Emphasis
+
 **Example**
-``` text
+
+```text
 **This is bold text**
 __This is bold text__
 *This is italic text*
 _This is italic text_
 ~~Strikethrough~~
 ```
+
 **This is bold text**
 
-__This is bold text__
+**This is bold text**
 
-*This is italic text*
+_This is italic text_
 
 _This is italic text_
 
 ~~Strikethrough~~
 
 ## Blockquotes
+
 **Example**
-``` text
+
+```text
 > Blockquotes Sample
 >> Blockquotes Sample
 >>> Blockquotes Sample
 ```
-> Blockquotes Sample
->> Blockquotes Sample
->>> Blockquotes Sample
 
+> Blockquotes Sample
+>
+> > Blockquotes Sample
+> >
+> > > Blockquotes Sample
 
 ## Lists
+
 **Example**
-``` text
+
+```text
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
   + Marker character change forces new list start:
@@ -82,16 +102,18 @@ _This is italic text_
     - Nulla volutpat aliquam velit
 + Very easy!
 ```
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  + Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
+
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    - Ac tristique libero volutpat at
+    * Facilisis in pretium nisl aliquet
     - Nulla volutpat aliquam velit
-+ Very easy!
+- Very easy!
 
 **Example**
-``` text
+
+```text
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
@@ -100,34 +122,37 @@ _This is italic text_
 1. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
 ```
+
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
+1) You can use sequential numbers...
+1) ...or keep all the numbers as `1.`
 
 **Example**
-``` text
+
+```text
 57. foo
 1. bar
 ```
+
 Start numbering with offset:
 
 57. foo
 1. bar
 
-
 ## Code
+
 **Example**
 
-``` text
+```text
     // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
 ```
+
     // Some comments
     line 1 of code
     line 2 of code
@@ -136,13 +161,12 @@ Start numbering with offset:
 **Example**
 
 var foo = function (bar) {
-  return bar++;
+return bar++;
 };
 
 console.log(foo(5));
 
-
-``` js
+```js
 var foo = function (bar) {
   return bar++;
 };
@@ -151,15 +175,17 @@ console.log(foo(5));
 ```
 
 ## Tables
+
 **Example**
 
-``` text
+```text
 | Option | Description |
 | ------ | ----------- |
 | data   | Description |
 | engine | Description |
 | ext    | Description |
 ```
+
 | Option | Description |
 | ------ | ----------- |
 | data   | Description |
@@ -169,30 +195,35 @@ console.log(foo(5));
 **Example**
 
 right and left aligned columns
-``` text
+
+```text
 | Option | Description |
 |:------| -----------:|
 | datadatadata   | DescriptionDescription |
 | engineengineengine | DescriptionDescriptionDescription |
 | extextextextextextext    | DescriptionDescriptionDescriptionDescription |
 ```
-| Option | Description |
-|:------| -----------:|
-| datadatadata   | DescriptionDescription |
-| engineengineengine | DescriptionDescriptionDescription |
-| extextextextextextext    | DescriptionDescriptionDescriptionDescription |
 
+| Option                |                                  Description |
+| :-------------------- | -------------------------------------------: |
+| datadatadata          |                       DescriptionDescription |
+| engineengineengine    |            DescriptionDescriptionDescription |
+| extextextextextextext | DescriptionDescriptionDescriptionDescription |
 
 ## Links
+
 **Example**
-``` text
+
+```text
 [link text](https://github.com/otoshimtoshi/knowledge)
 ```
+
 [link text](https://github.com/otoshimtoshi/knowledge)
 
-``` text
+```text
 Autoconverted link https://github.com/otoshimtoshi/knowledge (enable linkify to see)
 ```
+
 Autoconverted link https://github.com/otoshimtoshi/knowledge (enable linkify to see)
 
 ## Used by Plugings
@@ -200,15 +231,18 @@ Autoconverted link https://github.com/otoshimtoshi/knowledge (enable linkify to 
 ### 1. [markdown-it-mark](https://github.com/markdown-it/markdown-it-mark)
 
 **Example**
-``` text
+
+```text
 ==Marked text==
 ```
+
 ==Marked text==
 
 ### 2. [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
 
 **Example**
-``` text
+
+```text
 Footnote 1 link[^first].
 
 Inline footnote^[Text of inline footnote] definition.
@@ -223,7 +257,4 @@ Inline footnote^[Text of inline footnote] definition.
 Duplicated footnote reference[^three].
 
 [^first]: Footnote **can have markup**
-
-
 [^three]: Footnote text.
-

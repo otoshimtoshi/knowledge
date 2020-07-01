@@ -1,31 +1,22 @@
 const gulp = require('gulp');
-// const $ = require('../plugins');
+// const $ = require('gulp-load-plugins');
 const DIR = require('../conf').DIR;
-const del = require('del');
+const prettier = require('gulp-prettier');
 
 // ==========================================================================
-// task
+// task  https://prettier.io/docs/en/options.html
 // ==========================================================================
-gulp.task('delDest', (cb) => {
-  del(PATH.dest.path).then(() => {
-    cb();
-  });
-});
-
-gulp.task('delBuild', (cb) => {
-  del(PATH.build.path).then(() => {
-    cb();
-  });
+gulp.task('prettier', () => {
+  return gulp
+    .src(`./${DIR.DEST}/**/*.html`)
+    .pipe(prettier(option))
+    .pipe(gulp.dest(`./${DIR.DEST}`));
 });
 
 // ==========================================================================
 // config
 // ==========================================================================
-const PATH = {
-  dest: {
-    path: [`${DIR.DEST}`],
-  },
-  build: {
-    path: [`${DIR.BUILD}`],
-  },
+const option = {
+  singleQuote: true,
+  editorconfig: true,
 };

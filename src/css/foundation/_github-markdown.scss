@@ -3,11 +3,11 @@
   box-sizing: border-box;
 }
 
-.markdown-body>*:first-child {
+.markdown-body > *:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -15,10 +15,13 @@ a.markdown-body {
   background: transparent;
   color: #4183c4;
   text-decoration: none;
-  &:hover,:focus,:active {
+  &:hover,
+  :focus,
+  :active {
     text-decoration: underline;
   }
-  &:hover,:active {
+  &:hover,
+  :active {
     outline: 0;
   }
 }
@@ -55,7 +58,6 @@ h1.markdown-body {
   }
 }
 
-
 h2.markdown-body {
   margin-top: 1em;
   margin-bottom: 15px;
@@ -82,7 +84,6 @@ h2.markdown-body {
   }
 }
 
-
 h3.markdown-body {
   margin-top: 1em;
   margin-bottom: 15px;
@@ -103,7 +104,7 @@ h3.markdown-body {
     line-height: 1;
     text-decoration: none;
   }
-  &:hover .anchor .octicon-link{
+  &:hover .anchor .octicon-link {
     display: inline-block;
   }
 }
@@ -142,7 +143,7 @@ h5.markdown-body {
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
-  &.octicon-link{
+  &.octicon-link {
     display: none;
     color: #000;
     vertical-align: middle;
@@ -170,7 +171,7 @@ h6.markdown-body {
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
-  &.octicon-link{
+  &.octicon-link {
     display: none;
     color: #000;
     vertical-align: middle;
@@ -210,15 +211,14 @@ hr.markdown-body {
   border: 0 none;
   &::before {
     display: table;
-    content: "";
+    content: '';
   }
   &::after {
     display: table;
     clear: both;
-    content: "";
+    content: '';
   }
 }
-
 
 pre.markdown-body {
   word-wrap: normal;
@@ -231,7 +231,7 @@ pre.markdown-body {
   margin-bottom: 16px;
   font-family: monospace, monospace;
   font-size: 1em;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   code {
     display: inline;
     max-width: initial;
@@ -242,13 +242,14 @@ pre.markdown-body {
     word-wrap: normal;
     background-color: transparent;
     border: 0;
-    &::before,::after {
+    &::before,
+    ::after {
       content: normal;
     }
   }
 }
 
-pre.markdown-body >code {
+pre.markdown-body > code {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -258,24 +259,25 @@ pre.markdown-body >code {
   border: 0;
 }
 
-code.markdown-body  {
+code.markdown-body {
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
+  background-color: rgba(0, 0, 0, 0.04);
   border-radius: 3px;
   font-family: monospace, monospace;
   font-size: 1em;
-  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  &::before,::after {
+  font: 12px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  &::before,
+  ::after {
     letter-spacing: -0.2em;
-    content: "\00a0";
+    content: '\00a0';
   }
 }
 
-kbd.markdown-body  {
+kbd.markdown-body {
   background-color: #e7e7e7;
   background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
   background-image: linear-gradient(#fefefe, #e7e7e7);
@@ -285,7 +287,7 @@ kbd.markdown-body  {
   color: #000;
   padding: 3px 5px;
   line-height: 10px;
-  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font: 11px Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   display: inline-block;
   font-family: monospace, monospace;
   font-size: 1em;
@@ -296,14 +298,15 @@ input.markdown-body {
   font: inherit;
   margin: 0;
   line-height: normal;
-  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, 'Segoe UI Emoji',
+    'Segoe UI Symbol';
 }
 
 input[disabled].markdown-body {
   cursor: default;
 }
 
-input[type="checkbox"].markdown-body {
+input[type='checkbox'].markdown-body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
@@ -318,11 +321,11 @@ blockquote.markdown-body {
   border-left: 4px solid #ddd;
 }
 
-.markdown-body blockquote>:first-child {
+.markdown-body blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown-body blockquote>:last-child {
+.markdown-body blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -350,11 +353,13 @@ ol.markdown-body {
   margin-top: 0;
   margin-bottom: 16px;
   padding-left: 2em;
-  ol,ul {
+  ol,
+  ul {
     list-style-type: lower-roman;
     margin-top: 0;
     margin-bottom: 0;
-    ol,ul {
+    ol,
+    ul {
       list-style-type: lower-alpha;
     }
   }
@@ -386,10 +391,12 @@ table.markdown-body {
   tr:nth-child(2n) {
     background-color: #f8f8f8;
   }
-  tr th :first-child,tr td :first-child {
+  tr th :first-child,
+  tr td :first-child {
     margin-top: 0;
   }
-  tr th :last-child,tr td :last-child {
+  tr th :last-child,
+  tr td :last-child {
     margin-bottom: 0;
   }
 }
@@ -446,7 +453,7 @@ dl.markdown-body {
   }
 }
 
-.markdown-body li>p {
+.markdown-body li > p {
   margin-top: 16px;
 }
 
@@ -539,7 +546,7 @@ dl.markdown-body {
 }
 
 .markdown-body .highlight .nb {
-  color: #0086B3;
+  color: #0086b3;
 }
 
 .markdown-body .highlight .nc {
@@ -653,7 +660,7 @@ dl.markdown-body {
 
 .markdown-body .highlight .gc {
   color: #999;
-  background-color: #EAF2F5;
+  background-color: #eaf2f5;
 }
 
 .markdown-body .octicon {
@@ -677,7 +684,7 @@ dl.markdown-body {
   list-style-type: none;
 }
 
-.markdown-body .task-list-item+.task-list-item {
+.markdown-body .task-list-item + .task-list-item {
   margin-top: 3px;
 }
 

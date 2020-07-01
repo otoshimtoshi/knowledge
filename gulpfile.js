@@ -1,19 +1,29 @@
 const gulp = require('gulp');
 const requireDir = require('require-dir');
-
-const $ = require('./gulp/plugins');
-
 requireDir('./gulp/tasks');
 
-gulp.task('default', gulp.series(
-  'cleanDest',
-  gulp.parallel('marked','sass'),
-  gulp.parallel('serve', 'watch'),
-));
+// ==========================================================================
+// npm run dev => Perform the following tasks
+// ==========================================================================
+gulp.task(
+  'default',
+  gulp.series(
+    'delDest',
+    'marked',
+    gulp.parallel('ejs', 'sass'),
+    gulp.parallel('serve', 'watch')
+  )
+);
 
-gulp.task('build', gulp.series(
-  'cleanDest',
-  gulp.parallel('marked','sass'),
-  'cleanBuild',
-  'cleanCss'
-));
+// ==========================================================================
+// npm run build => Perform the following tasks
+// ==========================================================================
+gulp.task(
+  'build',
+  gulp.series(
+    'delDest',
+    gulp.parallel('marked', 'sass'),
+    'delBuild',
+    'cleanCss'
+  )
+);
