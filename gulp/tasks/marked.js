@@ -1,73 +1,24 @@
 const gulp = require('gulp');
-// const $ = require('../plugins');
-const DIR = require('../conf').DIR;
-
-const notify = require('gulp-notify');
-const plumber = require('gulp-plumber');
-const rename = require('gulp-rename');
-// vendor https://github.com/trwolfe13/gulp-markdownit
+const $ = require('../plugins');
+const conf = require('../conf').marked;
 const markdown = require('../gulp-markdown-it/index');
-const footnote = require('markdown-it-footnote');
-const mark = require('markdown-it-mark');
-const addClass = require('gulp-markdown-it-addClass');
-const hljs = require('highlight.js');
 
 // ==========================================================================
 // task
 // ==========================================================================
 gulp.task('marked', () => {
   return gulp
-    .src(PATH.src)
+    .src(conf.src)
     .pipe(
-      plumber({
-        errorHandler: notify.onError('<%= error.message %>'),
+      $.plumber({
+        errorHandler: $.notify.onError('<%= error.message %>'),
       })
     )
-    .pipe(markdown(config))
+    .pipe(markdown(conf.config))
     .pipe(
-      rename((path) => {
+      $.rename((path) => {
         path.dirname = path.dirname.replace('md', '.');
       })
     )
-    .pipe(gulp.dest(`${DIR.SRC}/knowledge`));
+    .pipe(gulp.dest(conf.dest));
 });
-
-// ==========================================================================
-// config
-// ==========================================================================
-const PATH = {
-  src: [
-    `${DIR.SRC}/**/*.md`,
-    `!${DIR.SRC}/**/_**/*.md`,
-    `!${DIR.SRC}/**/_*.md`,
-  ],
-  dest: `${DIR.DEST}`,
-};
-
-// marked options
-const options = {
-  html: true,
-  linkify: true,
-  langPrefix: '',
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return (
-          '<pre class="hljs"><code>' +
-          hljs.highlight(lang, str, true).value +
-          '</code></pre>'
-        );
-      } catch (__) {}
-    }
-
-    return '<pre class="hljs"><code>' + '</code></pre>';
-  },
-  baseUrl: '/knoeledge',
-  typographer: true,
-};
-
-// marked config
-const config = {
-  options: options,
-  plugins: [footnote, mark, addClass],
-};

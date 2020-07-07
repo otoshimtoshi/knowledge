@@ -6,6 +6,13 @@
       "layout": "default",
       "description": "index",
       "author": "index"
+    },
+    "test": {
+      "title": "test",
+      "id": "test",
+      "layout": "default",
+      "description": "index",
+      "author": "index"
     }
   }
 }

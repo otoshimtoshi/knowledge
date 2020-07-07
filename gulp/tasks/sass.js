@@ -1,39 +1,24 @@
 const gulp = require('gulp');
-// const $ = require('gulp-load-plugins');
-const DIR = require('../conf').DIR;
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const rename = require('gulp-rename');
+const $ = require('../plugins');
+const conf = require('../conf').sass;
 
 // ==========================================================================
 // task
 // ==========================================================================
 gulp.task('sass', () => {
   return gulp
-    .src(PATH.src)
-    .pipe(sass().on('error', sass.logError))
+    .src(conf.src)
+    .pipe($.sass().on('error', $.sass.logError))
     .pipe(
-      autoprefixer({
-        browsers: PATH.browsers,
+      $.autoprefixer({
+        browsers: conf.browsers,
         cascade: false,
       })
     )
     .pipe(
-      rename((path) => {
-        path.dirname = path.dirname.replace('css', '.');
+      $.rename((path) => {
+        path.dirname = path.dirname.replace('sass', '.');
       })
     )
-    .pipe(gulp.dest(PATH.dest));
+    .pipe(gulp.dest(conf.dest));
 });
-
-// ==========================================================================
-// config
-// ==========================================================================
-const PATH = {
-  src: [
-    `${DIR.SRC}/**/*.{sass,scss}`,
-    `!${DIR.SRC}/**/_**/*.{sass,scss}`,
-    `!${DIR.SRC}/**/_*.{sass,scss}`,
-  ],
-  dest: `${DIR.DEST}/css`,
-};
