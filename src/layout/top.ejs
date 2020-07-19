@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('head.ejs') %>
+  <body>
+    <%- include('header.ejs') %>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <% pageIndex.forEach(function(pageIndex){ %> <%-
+          include('pageIndex.ejs',{pageIndex: pageIndex}); %> <% }); %>
+        </div>
+      </div>
+    </section>
+    <%- include('footer.ejs'); %>
+  </body>
+</html>

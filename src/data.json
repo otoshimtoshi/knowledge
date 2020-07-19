@@ -1,18 +1,25 @@
 {
   "pages": {
     "index": {
-      "title": "index",
       "id": "index",
-      "layout": "default",
-      "description": "index",
-      "author": "index"
+      "layout": "top",
+      "title": "knowledge",
+      "description": "トップ",
+      "author": "M.O"
     },
-    "test": {
-      "title": "test",
-      "id": "test",
-      "layout": "default",
-      "description": "index",
-      "author": "index"
+    "cheatSheet": {
+      "id": "cheatSheet",
+      "layout": "page",
+      "title": "MarkDown記法",
+      "description": "MarkDownの書き方例",
+      "author": "M.O"
+    },
+    "mermaid": {
+      "id": "mermaid",
+      "layout": "page",
+      "title": "フローチャート記法",
+      "description": "フローチャートの書き方例",
+      "author": ""
     }
   }
 }

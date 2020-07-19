@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <%- include('head.ejs') %>
+  <body>
+    <%- include('header.ejs') %>
+    <section class="section">
+      <div class="container">
+        <div class="db-main">
+          <div class="db-lead">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li>
+                  <a href="/">TOP</a>
+                </li>
+                <li class="is-active">
+                  <a href="/<%- pageData.id %>.html"><%- pageData.id %></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </br>
+        <h1 class="title"><%- pageData.title %></h1>
+        <p><%- pageData.description %></p>
+        <p><%- pageData.author %></p>
+        <%- include('../knowledge/' + pageData.id) %>
+      </div>
+    </section>
+    <%- include('footer.ejs') %>
+  </body>
+</html>

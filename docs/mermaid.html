@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>knowledge</title>
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+/>
+<meta name="description" content="description" />
+<meta name="keywords" content="gulp markdown" />
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<script src=https://use.fontawesome.com/releases/v5.6.0/js/all.js></script>
+<script src="/js/mermaid.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+</head>
+  <body>
+    <header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <span class="anime-type">
+          <i class="far fa-square"></i>
+          TOP
+        </span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+    <section class="section">
+      <div class="container">
+        <div class="db-main">
+          <div class="db-lead">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li>
+                  <a href="/">TOP</a>
+                </li>
+                <li class="is-active">
+                  <a href="/mermaid.html">mermaid</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </br>
+        <h1 class="title">フローチャート記法</h1>
+        <p>フローチャートの書き方例</p>
+        <p></p>
+        <h2 class="markdown-body">フローチャート記法</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">graph LR
+A -- text --> B -- text2 --> C
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<div class="mermaid">
+graph LR
+A -- text --> B -- text2 --> C
+</div>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">graph TB
+    A & B--> C & D
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<div class="mermaid">
+graph TB
+    A & B--> C & D
+</div>
+
+      </div>
+    </section>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>knowledge</strong> by <a href="#">Masatoshi Otoshi</a>. The source
+      code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

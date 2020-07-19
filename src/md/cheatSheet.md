@@ -1,8 +1,8 @@
-## Heading
+## 目次
 
-**Example**
+**例**
 
-```text
+```
 # h1 Heading
 ## h2 Heading
 ### h3 Heading
@@ -11,6 +11,8 @@
 ###### h6 Heading
 ```
 
+**出力**
+
 # h1 Heading
 
 ## h2 Heading
@@ -25,14 +27,10 @@
 
 ---
 
-## Horizontal
+## 区切り線
 
-**Example**
+**例**
 
-```text
-___
----
-***
 ```
 
 ---
@@ -41,47 +39,61 @@ ___
 
 ---
 
-## Typographic replacements
+```
 
-**Example**
+**出力**
 
-```text
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+---
+
+---
+
+---
+
+## 特殊記号
+
+**例**
+
 ```
 
 (c) (C) (r) (R) (tm) (TM) (p) (P) +-
 
-## Emphasis
+```
 
-**Example**
+**出力**
 
-```text
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+## 強調
+
+**例**
+
+```
 **This is bold text**
-__This is bold text__
-*This is italic text*
 _This is italic text_
 ~~Strikethrough~~
 ```
 
-**This is bold text**
+**出力**
 
 **This is bold text**
-
-_This is italic text_
 
 _This is italic text_
 
 ~~Strikethrough~~
 
-## Blockquotes
+## 引用
 
-**Example**
+**例**
 
-```text
+```
 > Blockquotes Sample
->> Blockquotes Sample
->>> Blockquotes Sample
+>
+> > Blockquotes Sample
+> >
+> > > Blockquotes Sample
 ```
+
+**出力**
 
 > Blockquotes Sample
 >
@@ -89,19 +101,21 @@ _This is italic text_
 > >
 > > > Blockquotes Sample
 
-## Lists
+## リスト
 
-**Example**
+**例**
 
-```text
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  + Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
 ```
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    - Ac tristique libero volutpat at
+    * Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
+- Very easy!
+```
+
+**出力**
 
 - Create a list by starting a line with `+`, `-`, or `*`
 - Sub-lists are made by indenting 2 spaces:
@@ -111,17 +125,18 @@ _This is italic text_
     - Nulla volutpat aliquam velit
 - Very easy!
 
-**Example**
+**例**
 
-```text
+```
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
 
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
+1) You can use sequential numbers...
+1) ...or keep all the numbers as `1.`
 ```
+
+**出力**
 
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
@@ -130,43 +145,35 @@ _This is italic text_
 1) You can use sequential numbers...
 1) ...or keep all the numbers as `1.`
 
-**Example**
+**例**
 
-```text
+```
 57. foo
 1. bar
 ```
 
-Start numbering with offset:
+**出力**
 
 57. foo
 1. bar
 
-## Code
+## コード
 
-**Example**
+**例**
 
-```text
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-```
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-**Example**
-
+````
+```javascript
 var foo = function (bar) {
-return bar++;
+  return bar++;
 };
 
 console.log(foo(5));
+```
+````
 
-```js
+**出力**
+
+```javascript
 var foo = function (bar) {
   return bar++;
 };
@@ -174,11 +181,11 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
-## Tables
+## テーブル
 
-**Example**
+**例**
 
-```text
+```
 | Option | Description |
 | ------ | ----------- |
 | data   | Description |
@@ -186,17 +193,16 @@ console.log(foo(5));
 | ext    | Description |
 ```
 
+**出力**
 | Option | Description |
 | ------ | ----------- |
-| data   | Description |
+| data | Description |
 | engine | Description |
-| ext    | Description |
+| ext | Description |
 
-**Example**
+**例**
 
-right and left aligned columns
-
-```text
+```
 | Option | Description |
 |:------| -----------:|
 | datadatadata   | DescriptionDescription |
@@ -204,45 +210,54 @@ right and left aligned columns
 | extextextextextextext    | DescriptionDescriptionDescriptionDescription |
 ```
 
-| Option                |                                  Description |
+**出力**
+| Option | Description |
 | :-------------------- | -------------------------------------------: |
-| datadatadata          |                       DescriptionDescription |
-| engineengineengine    |            DescriptionDescriptionDescription |
+| datadatadata | DescriptionDescription |
+| engineengineengine | DescriptionDescriptionDescription |
 | extextextextextextext | DescriptionDescriptionDescriptionDescription |
 
-## Links
+## リンク
 
-**Example**
+**例**
 
-```text
+```
 [link text](https://github.com/otoshimtoshi/knowledge)
 ```
 
+**出力**
+
 [link text](https://github.com/otoshimtoshi/knowledge)
 
-```text
+**例**
+
+```
 Autoconverted link https://github.com/otoshimtoshi/knowledge (enable linkify to see)
 ```
 
+**出力**
+
 Autoconverted link https://github.com/otoshimtoshi/knowledge (enable linkify to see)
 
-## Used by Plugings
+## 使っているプラグイン
 
 ### 1. [markdown-it-mark](https://github.com/markdown-it/markdown-it-mark)
 
-**Example**
+**例**
 
-```text
+```
 ==Marked text==
 ```
+
+**出力**
 
 ==Marked text==
 
 ### 2. [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote)
 
-**Example**
+**例**
 
-```text
+```
 Footnote 1 link[^first].
 
 Inline footnote^[Text of inline footnote] definition.

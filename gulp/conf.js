@@ -46,6 +46,16 @@ module.exports.sass = {
   dest: `${DIR.DEST}/css`,
 };
 
+module.exports.replace = {
+  src: [
+    `${DIR.SRC}/**/*.js`,
+    `!${DIR.SRC}/**/_**/*.js`,
+    `!${DIR.SRC}/**/_*.js`,
+  ],
+  dest: `${DIR.DEST}/js`,
+  build: `${DIR.BUILD}/js`,
+};
+
 module.exports.prettier = {
   src: [`${DIR.SRC}/**/*.html`],
   dest: `${DIR.DEST}/*.html`,
@@ -72,18 +82,21 @@ module.exports.marked = {
       html: true,
       linkify: true,
       langPrefix: '',
-      highlight: function (str, lang) {
+      highlight: function (code, lang) {
         if (lang && hljs.getLanguage(lang)) {
           try {
             return (
-              '<pre class="hljs"><code>' +
-              hljs.highlight(lang, str, true).value +
+              '<pre class="hljs markdown-body"><code class="markdown-body">' +
+              hljs.highlight(lang, code, true).value +
               '</code></pre>'
             );
           } catch (__) {}
         }
-
-        return '<pre class="hljs"><code>' + '</code></pre>';
+        return (
+          '<pre class="markdown-body"><code class="markdown-body">' +
+          code +
+          '</code></pre>'
+        );
       },
       baseUrl: DIR.PATH,
       typographer: true,

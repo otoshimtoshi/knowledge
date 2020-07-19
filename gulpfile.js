@@ -10,7 +10,7 @@ gulp.task(
   gulp.series(
     'delDest',
     'marked',
-    gulp.parallel('ejs', 'sass'),
+    gulp.parallel('ejs', 'sass', 'replace'),
     gulp.parallel('serve', 'watch')
   )
 );
@@ -21,9 +21,9 @@ gulp.task(
 gulp.task(
   'build',
   gulp.series(
-    'delDest',
-    gulp.parallel('marked', 'sass'),
     'delBuild',
+    'marked',
+    gulp.parallel('replacehtml', 'sass', 'replace'),
     'cleanCss'
   )
 );
