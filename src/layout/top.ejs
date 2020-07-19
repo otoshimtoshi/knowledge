@@ -9,6 +9,7 @@
           <% pageIndex.forEach(function(pageIndex){ %> <%-
           include('pageIndex.ejs',{pageIndex: pageIndex}); %> <% }); %>
         </div>
+        <%- include('../knowledge/index.ejs'); %>
       </div>
     </section>
     <%- include('footer.ejs'); %>
