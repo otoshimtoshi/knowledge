@@ -13,9 +13,10 @@ git clone https://github.com/otoshimtoshi/knowledge.git
 開発
 
 ```
-$ npm install
 $ npm run dev
 ```
+
+上記で自動でブラウザに画面が起動されます。
 
 ビルド
 
@@ -23,12 +24,12 @@ $ npm run dev
 $ npm run build
 ```
 
-上記で自動でブラウザに画面が起動されます。
+上記で docs フォルダへ push する用のファイルが生成されます。
 
 ## 新規ファイルの格納手順
 
-- ・ src/md 　配下にマークダウンファイルの格納
-- ・ src/data.json 　に以下を追加します。
+1. src/md 　配下にマークダウンファイルの格納
+2. src/data.json 　に以下を追加します。
 
 ```
 "": {                →　.mdファイル名と同様の文字列※

@@ -5,21 +5,21 @@
       "layout": "top",
       "title": "knowledge",
       "description": "トップ",
-      "author": "M.O"
+      "author": "otoshi"
     },
     "cheatSheet": {
       "id": "cheatSheet",
       "layout": "page",
       "title": "MarkDown記法",
       "description": "MarkDownの書き方例",
-      "author": "M.O"
+      "author": "otoshi"
     },
     "mermaid": {
       "id": "mermaid",
       "layout": "page",
       "title": "フローチャート記法",
       "description": "フローチャートの書き方例",
-      "author": ""
+      "author": "otoshi"
     }
   }
 }
