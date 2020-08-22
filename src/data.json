@@ -20,6 +20,13 @@
       "title": "フローチャート記法",
       "description": "フローチャートの書き方例",
       "author": "otoshi"
+    },
+    "vue": {
+      "id": "vue",
+      "layout": "page",
+      "title": "Vue.js",
+      "description": "Vue.jsについて",
+      "author": "otoshi"
     }
   }
 }
