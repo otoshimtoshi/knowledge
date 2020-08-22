@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>knowledge</title>
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+/>
+<meta name="description" content="description" />
+<meta name="keywords" content="gulp markdown" />
+<link rel="stylesheet" type="text/css" href="./css/main.css" />
+<script src=https://use.fontawesome.com/releases/v5.6.0/js/all.js></script>
+<script src="./js/mermaid.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+</head>
+  <body>
+    <header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <span class="anime-type">
+          <i class="far fa-square"></i>
+          TOP
+        </span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+    <section class="section">
+      <div class="container">
+        <div class="db-main">
+          <div class="db-lead">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li>
+                  <a href="./index.html">TOP</a>
+                </li>
+                <li class="is-active">
+                  <a href="./vue.html">vue</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </br>
+        <h1 class="title">Vue.js</h1>
+        <p>Vue.jsについて</p>
+        <p>otoshi</p>
+        <h2 class="markdown-body">Vue.js とは？</h2>
+<p class="markdown-body">wiki によると</p>
+<blockquote class="markdown-body">
+<p class="markdown-body">Web アプリケーションにおけるユーザーインターフェイスを構築するための、オープンソースの JavaScript フレームワークである。</p>
+</blockquote>
+<p class="markdown-body">要はユーザーが実際に操作する画面側を構築するためのフレームワーク。</p>
+<h3 class="markdown-body">少し歴史</h3>
+<p class="markdown-body">Evan You（エヴァン・ヨー）という元 Google 社員が開発した JS フレームワーク。
+2014 年頃らしい。</p>
+<p class="markdown-body">React 　 → 　 FaceBook と有志</p>
+<p class="markdown-body">Angular 　 → 　 Google と有志</p>
+<p class="markdown-body">Vue は個人と有志によって作られている。</p>
+<hr class="markdown-body">
+<h2 class="markdown-body">こんな感じで Vue.js が使われている</h2>
+<p class="markdown-body"><a href="https://stopcovid19.metro.tokyo.lg.jp/" class="markdown-body">新型コロナウィルス感染症対策サイト</a></p>
+<p class="markdown-body"><strong>実際の画面とコードを見ながら見てみよう</strong></p>
+<h3 class="markdown-body">Vue.js の独特な書き方とバインドという考え方</h3>
+<p class="markdown-body"><a href="https://github.com/tokyo-metropolitan-gov/covid19/blob/development/components/WhatsNew.vue" class="markdown-body">新型コロナウィルス感染症対策サイト 最新のお知らせ部分のコード</a></p>
+<p class="markdown-body"><strong>ポイント</strong></p>
+<ol class="markdown-body">
+<li class="markdown-body">
+<p class="markdown-body">HTML,CSS,JS が.vue に詰まっている。</p>
+</li>
+<li class="markdown-body">
+<p class="markdown-body">{{ $t(‘最新のお知らせ’) }}　が意外と面白い。</p>
+<blockquote class="markdown-body">
+<p class="markdown-body">“最新のお知らせ”: “What’s new”</p>
+</blockquote>
+<blockquote class="markdown-body">
+<p class="markdown-body">“最新のお知らせ”: “Dernières actualités”</p>
+</blockquote>
+<blockquote class="markdown-body">
+<p class="markdown-body">“最新のお知らせ”: “いちばん あたらしい こと”</p>
+</blockquote>
+</li>
+</ol>
+<h3 class="markdown-body">Vue.js のライフサイクルフックについて</h3>
+<p class="markdown-body"><a href="https://github.com/tokyo-metropolitan-gov/covid19/blob/development/components/AgencyBarChart.vue" class="markdown-body">AgencyBarChart.vue</a></p>
+<img src="https://jp.vuejs.org/images/lifecycle.png">
+<h3 class="markdown-body">画像に computed(算出プロパティ)がないので補足</h3>
+<p class="markdown-body">JAVA でいうところの getter、setter の認識でほぼ正しいです。</p>
+<p class="markdown-body"><strong>ドキュメントオブジェクトモデル (DOM)</strong></p>
+<blockquote class="markdown-body">
+<p class="markdown-body">Document Object Model (DOM) は、— ウェブページを表す HTML のように — 文書の構造をメモリ内に表現すること</p>
+</blockquote>
+<hr class="markdown-body">
+<h2 class="markdown-body">リンク集</h2>
+<h2 class="markdown-body">リンク集</h2>
+<p class="markdown-body"><a href="https://jp.vuejs.org/" class="markdown-body">Vue.js 公式</a></p>
+<p class="markdown-body"><a href="https://github.com/vuejs" class="markdown-body">Vue.js 公式リポジトリ</a></p>
+<p class="markdown-body"><a href="https://ja.nuxtjs.org/" class="markdown-body">Nuxt.js 公式</a></p>
+<p class="markdown-body"><a href="https://github.com/nuxt-community" class="markdown-body">NuxtCommunity</a></p>
+<p class="markdown-body">こんなフレームワークもある(Vue.js 公式サイトに記載されているフレームワーク)。</p>
+<p class="markdown-body"><a href="https://quasar.dev/" class="markdown-body">QuasarFramework</a></p>
+<p class="markdown-body"><a href="https://stopcovid19.metro.tokyo.lg.jp/" class="markdown-body">新型コロナウィルス感染症対策サイト</a></p>
+<p class="markdown-body"><a href="https://github.com/tokyo-metropolitan-gov/covid19" class="markdown-body">covid19 リポジトリ</a></p>
+
+      </div>
+    </section>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>knowledge</strong> by
+      <a href="https://github.com/otoshimtoshi">Masatoshi Otoshi</a>. The source
+      code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

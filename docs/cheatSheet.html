@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>knowledge</title>
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+/>
+<meta name="description" content="description" />
+<meta name="keywords" content="gulp markdown" />
+<link rel="stylesheet" type="text/css" href="./css/main.css" />
+<script src=https://use.fontawesome.com/releases/v5.6.0/js/all.js></script>
+<script src="./js/mermaid.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+</head>
+  <body>
+    <header>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <span class="anime-type">
+          <i class="far fa-square"></i>
+          TOP
+        </span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+    <section class="section">
+      <div class="container">
+        <div class="db-main">
+          <div class="db-lead">
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+              <ul>
+                <li>
+                  <a href="./index.html">TOP</a>
+                </li>
+                <li class="is-active">
+                  <a href="./cheatSheet.html">cheatSheet</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </br>
+        <h1 class="title">MarkDown記法</h1>
+        <p>MarkDownの書き方例</p>
+        <p>otoshi</p>
+        <h2 class="markdown-body">目次</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body"># h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<h1 class="markdown-body">h1 Heading</h1>
+<h2 class="markdown-body">h2 Heading</h2>
+<h3 class="markdown-body">h3 Heading</h3>
+<h4 class="markdown-body">h4 Heading</h4>
+<h5 class="markdown-body">h5 Heading</h5>
+<h6 class="markdown-body">h6 Heading</h6>
+<hr class="markdown-body">
+<h2 class="markdown-body">区切り線</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">
+---
+
+---
+
+---
+
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<hr class="markdown-body">
+<hr class="markdown-body">
+<hr class="markdown-body">
+<h2 class="markdown-body">特殊記号</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<p class="markdown-body">© © ® ® ™ ™ § § ±</p>
+<h2 class="markdown-body">強調</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">**This is bold text**
+_This is italic text_
+~~Strikethrough~~
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<p class="markdown-body"><strong>This is bold text</strong></p>
+<p class="markdown-body"><em>This is italic text</em></p>
+<p class="markdown-body"><s>Strikethrough</s></p>
+<h2 class="markdown-body">引用</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">> Blockquotes Sample
+>
+> > Blockquotes Sample
+> >
+> > > Blockquotes Sample
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<blockquote class="markdown-body">
+<p class="markdown-body">Blockquotes Sample</p>
+<blockquote class="markdown-body">
+<p class="markdown-body">Blockquotes Sample</p>
+<blockquote class="markdown-body">
+<p class="markdown-body">Blockquotes Sample</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 class="markdown-body">リスト</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    - Ac tristique libero volutpat at
+    * Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
+- Very easy!
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<ul class="markdown-body">
+<li class="markdown-body">Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+<li class="markdown-body">Sub-lists are made by indenting 2 spaces:
+<ul class="markdown-body">
+<li class="markdown-body">Marker character change forces new list start:
+<ul class="markdown-body">
+<li class="markdown-body">Ac tristique libero volutpat at</li>
+</ul>
+<ul class="markdown-body">
+<li class="markdown-body">Facilisis in pretium nisl aliquet</li>
+</ul>
+<ul class="markdown-body">
+<li class="markdown-body">Nulla volutpat aliquam velit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="markdown-body">Very easy!</li>
+</ul>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+1) You can use sequential numbers...
+1) ...or keep all the numbers as `1.`
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<ol class="markdown-body">
+<li class="markdown-body">Lorem ipsum dolor sit amet</li>
+<li class="markdown-body">Consectetur adipiscing elit</li>
+<li class="markdown-body">Integer molestie lorem at massa</li>
+</ol>
+<ol class="markdown-body">
+<li class="markdown-body">You can use sequential numbers…</li>
+<li class="markdown-body">…or keep all the numbers as <code>1.</code></li>
+</ol>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">57. foo
+1. bar
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<ol start="57" class="markdown-body">
+<li class="markdown-body">foo</li>
+<li class="markdown-body">bar</li>
+</ol>
+<h2 class="markdown-body">コード</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">```javascript
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<pre class="hljs markdown-body"><code class="markdown-body"><span class="hljs-keyword">var</span> foo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">bar</span>) </span>{
+  <span class="hljs-keyword">return</span> bar++;
+};
+
+<span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">5</span>));
+</code></pre>
+<h2 class="markdown-body">テーブル</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">| Option | Description |
+| ------ | ----------- |
+| data   | Description |
+| engine | Description |
+| ext    | Description |
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<table class="markdown-body">
+<thead class="markdown-body">
+<tr class="markdown-body">
+<th class="markdown-body">Option</th>
+<th class="markdown-body">Description</th>
+</tr>
+</thead>
+<tbody class="markdown-body">
+<tr class="markdown-body">
+<td class="markdown-body">data</td>
+<td class="markdown-body">Description</td>
+</tr>
+<tr class="markdown-body">
+<td class="markdown-body">engine</td>
+<td class="markdown-body">Description</td>
+</tr>
+<tr class="markdown-body">
+<td class="markdown-body">ext</td>
+<td class="markdown-body">Description</td>
+</tr>
+</tbody>
+</table>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">| Option | Description |
+|:------| -----------:|
+| datadatadata   | DescriptionDescription |
+| engineengineengine | DescriptionDescriptionDescription |
+| extextextextextextext    | DescriptionDescriptionDescriptionDescription |
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<table class="markdown-body">
+<thead class="markdown-body">
+<tr class="markdown-body">
+<th style="text-align:left" class="markdown-body">Option</th>
+<th style="text-align:right" class="markdown-body">Description</th>
+</tr>
+</thead>
+<tbody class="markdown-body">
+<tr class="markdown-body">
+<td style="text-align:left" class="markdown-body">datadatadata</td>
+<td style="text-align:right" class="markdown-body">DescriptionDescription</td>
+</tr>
+<tr class="markdown-body">
+<td style="text-align:left" class="markdown-body">engineengineengine</td>
+<td style="text-align:right" class="markdown-body">DescriptionDescriptionDescription</td>
+</tr>
+<tr class="markdown-body">
+<td style="text-align:left" class="markdown-body">extextextextextextext</td>
+<td style="text-align:right" class="markdown-body">DescriptionDescriptionDescriptionDescription</td>
+</tr>
+</tbody>
+</table>
+<h2 class="markdown-body">リンク</h2>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">[link text](https://github.com/otoshimtoshi/knowledge)
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<p class="markdown-body"><a href="https://github.com/otoshimtoshi/knowledge" class="markdown-body">link text</a></p>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">Autoconverted link https://github.com/otoshimtoshi/knowledge (enable linkify to see)
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<p class="markdown-body">Autoconverted link <a href="https://github.com/otoshimtoshi/knowledge" class="markdown-body">https://github.com/otoshimtoshi/knowledge</a> (enable linkify to see)</p>
+<h2 class="markdown-body">使っているプラグイン</h2>
+<h3 class="markdown-body">1. <a href="https://github.com/markdown-it/markdown-it-mark" class="markdown-body">markdown-it-mark</a></h3>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">==Marked text==
+</code></pre>
+<p class="markdown-body"><strong>出力</strong></p>
+<p class="markdown-body"><mark>Marked text</mark></p>
+<h3 class="markdown-body">2. <a href="https://github.com/markdown-it/markdown-it-footnote" class="markdown-body">markdown-it-footnote</a></h3>
+<p class="markdown-body"><strong>例</strong></p>
+<pre class="markdown-body"><code class="markdown-body">Footnote 1 link[^first].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^three].
+</code></pre>
+<p class="markdown-body">Footnote 1 link<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p class="markdown-body">Inline footnote<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> definition.</p>
+<p class="markdown-body">Duplicated footnote reference<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p class="markdown-body">Footnote <strong>can have markup</strong> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p class="markdown-body">Text of inline footnote <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p class="markdown-body">Footnote text. <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+      </div>
+    </section>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>knowledge</strong> by
+      <a href="https://github.com/otoshimtoshi">Masatoshi Otoshi</a>. The source
+      code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
