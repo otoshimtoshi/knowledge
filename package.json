@@ -41,14 +41,21 @@
     "gulp-sass": "^4.0.2",
     "gulp-util": "^3.0.8",
     "highlight.js": "^10.1.1",
+    "husky": "^4.2.5",
     "markdown-it": "^11.0.0",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-mark": "^3.0.0",
     "marked": "^1.1.0",
     "mermaid": "^8.6.0",
     "node-sass": "^4.13.0",
+    "pretty-quick": "^3.0.0",
     "require-dir": "^1.2.0",
     "through2": "^4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }

@@ -1,9 +1,9 @@
 // PATHファイル
 const DIR = (module.exports.DIR = {
-  PATH: '/knoeledge',
-  SRC: 'src',
-  DEST: 'dst',
-  BUILD: 'docs',
+  PATH: "/knoeledge",
+  SRC: "src",
+  DEST: "dst",
+  BUILD: "docs",
 });
 
 module.exports.serve = {
@@ -14,7 +14,7 @@ module.exports.serve = {
     ghostMode: false,
     server: {
       baseDir: DIR.DEST,
-      index: 'index.html',
+      index: "index.html",
       routes: {
         [DIR.PATH]: `${DIR.DEST}/`,
       },
@@ -28,7 +28,7 @@ module.exports.serve = {
     ghostMode: false,
     server: {
       baseDir: DIR.BUILD,
-      index: 'index.html',
+      index: "index.html",
       routes: {
         [DIR.PATH]: `${DIR.BUILD}/`,
       },
@@ -57,18 +57,19 @@ module.exports.replace = {
 };
 
 module.exports.prettier = {
-  src: [`${DIR.SRC}/**/*.html`],
+  src: [`${DIR.DEST}/**/*.html`],
   dest: `${DIR.DEST}/*.html`,
   option: {
     singleQuote: true,
-    editorconfig: true,
+    editorconfig: false,
+    useTabs: true,
   },
 };
 
-const footnote = require('markdown-it-footnote');
-const mark = require('markdown-it-mark');
-const addClass = require('gulp-markdown-it-addClass');
-const hljs = require('highlight.js');
+const footnote = require("markdown-it-footnote");
+const mark = require("markdown-it-mark");
+const addClass = require("gulp-markdown-it-addClass");
+const hljs = require("highlight.js");
 
 module.exports.marked = {
   src: [
@@ -81,21 +82,21 @@ module.exports.marked = {
     options: {
       html: true,
       linkify: true,
-      langPrefix: '',
+      langPrefix: "",
       highlight: function (code, lang) {
         if (lang && hljs.getLanguage(lang)) {
           try {
             return (
               '<pre class="hljs markdown-body"><code class="markdown-body">' +
               hljs.highlight(lang, code, true).value +
-              '</code></pre>'
+              "</code></pre>"
             );
           } catch (__) {}
         }
         return (
           '<pre class="markdown-body"><code class="markdown-body">' +
           code +
-          '</code></pre>'
+          "</code></pre>"
         );
       },
       baseUrl: DIR.PATH,

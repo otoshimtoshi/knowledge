@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>knowledge</title>
-<meta
-  name="viewport"
-  content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
-/>
-<meta name="description" content="description" />
-<meta name="keywords" content="gulp markdown" />
-<link rel="stylesheet" type="text/css" href="./css/main.css" />
-<script src=https://use.fontawesome.com/releases/v5.6.0/js/all.js></script>
-<script src="./js/mermaid.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>knowledge</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <meta name="description" content="description" />
+    <meta name="keywords" content="gulp markdown" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <script src=https://use.fontawesome.com/releases/v5.6.0/js/all.js />
+    <script src="./js/mermaid.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </head>
+
   <body>
     <header>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="./index.html">
-        <span class="anime-type">
-          <i class="far fa-square"></i>
-          TOP
-        </span>
-      </a>
-    </div>
-  </nav>
-</header>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <span class="anime-type">
+              <i class="far fa-square"></i>
+              TOP
+            </span>
+          </a>
+        </div>
+      </nav>
+    </header>
 
     <section class="section">
       <div class="container">
@@ -47,51 +48,46 @@
             </nav>
           </div>
         </div>
-      </br>
         <h1 class="title">フローチャート記法</h1>
         <p>フローチャートの書き方例</p>
         <p>otoshi</p>
         <h2 class="markdown-body">フローチャート記法</h2>
-<p class="markdown-body"><a href="https://mermaid-js.github.io/mermaid/#/" class="markdown-body">より詳細な使い方はこちら(外部リンクが開きます)</a></p>
-<p class="markdown-body"><mark>以下は全て div タグの mermaid 内のみ適用されます。</mark></p>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">graph TD
+        <p class="markdown-body">
+          <a
+            href="https://mermaid-js.github.io/mermaid/#/"
+            class="markdown-body"
+            >より詳細な使い方はこちら(外部リンクが開きます)</a
+          >
+        </p>
+        <p class="markdown-body">
+          <mark>以下は全て div タグの mermaid 内のみ適用されます。</mark>
+        </p>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">graph TD
     Start --> Stop
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-graph TD
-    Start --> Stop
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">graph LR
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">graph TD Start --> Stop</div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">graph LR
     Start --> Stop
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-graph LR
-    Start --> Stop
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">graph LR
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">graph LR Start --> Stop</div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">graph LR
     id1[(Database)]
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-graph LR
-    id1[(Database)]
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">graph LR
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">graph LR id1[(Database)]</div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">graph LR
    a --> b & c--> d
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-graph LR
-   a --> b & c--> d
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">graph TB
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">graph LR a --> b & c--> d</div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">graph TB
     c1-->a2
     subgraph one
     a1-->a2
@@ -103,37 +99,25 @@ graph LR
     c1-->c2
     end
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-graph TB
-    c1-->a2
-    subgraph one
-    a1-->a2
-    end
-    subgraph two
-    b1-->b2
-    end
-    subgraph three
-    c1-->c2
-    end
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">graph LR
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">
+          graph TB c1-->a2 subgraph one a1-->a2 end subgraph two b1-->b2 end
+          subgraph three c1-->c2 end
+        </div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">graph LR
     A[Hard edge] -->|Link text| B(Round edge)
     B --> C{Decision}
     C -->|One| D[Result one]
     C -->|Two| E[Result two]
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-graph LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">sequenceDiagram
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">
+          graph LR A[Hard edge] -->|Link text| B(Round edge) B --> C{Decision} C
+          -->|One| D[Result one] C -->|Two| E[Result two]
+        </div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">sequenceDiagram
     Alice->>Bob: Hello Bob, how are you?
     alt is sick
         Bob->>Alice: Not so good :(
@@ -144,58 +128,47 @@ graph LR
         Bob->>Alice: Thanks for asking
     end
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-sequenceDiagram
-    Alice->>Bob: Hello Bob, how are you?
-    alt is sick
-        Bob->>Alice: Not so good :(
-    else is well
-        Bob->>Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-        Bob->>Alice: Thanks for asking
-    end
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">erDiagram
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">
+          sequenceDiagram Alice->>Bob: Hello Bob, how are you? alt is sick
+          Bob->>Alice: Not so good :( else is well Bob->>Alice: Feeling fresh
+          like a daisy end opt Extra response Bob->>Alice: Thanks for asking end
+        </div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre class="markdown-body"><code class="markdown-body">erDiagram
     CUSTOMER ||--o{ ORDER : places
     ORDER ||--|{ LINE-ITEM : contains
     CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses 
-</div>
-<p class="markdown-body"><strong>例</strong></p>
-<pre class="markdown-body"><code class="markdown-body">pie title Pets adopted by volunteers
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">
+          erDiagram CUSTOMER ||--o{ ORDER : places ORDER ||--|{ LINE-ITEM :
+          contains CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+        </div>
+        <p class="markdown-body"><strong>例</strong></p>
+        <pre
+          class="markdown-body"
+        ><code class="markdown-body">pie title Pets adopted by volunteers
     "Dogs" : 386
     "Cats" : 85
     "Rats" : 15
 </code></pre>
-<p class="markdown-body"><strong>出力</strong></p>
-<div class="mermaid">
-pie title Pets adopted by volunteers
-    "Dogs" : 386
-    "Cats" : 85
-    "Rats" : 15 
-</div>
-
+        <p class="markdown-body"><strong>出力</strong></p>
+        <div class="mermaid">
+          pie title Pets adopted by volunteers "Dogs" : 386 "Cats" : 85 "Rats" :
+          15
+        </div>
       </div>
     </section>
     <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong>knowledge</strong> by
-      <a href="https://github.com/otoshimtoshi">Masatoshi Otoshi</a>. The source
-      code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
-    </p>
-  </div>
-</footer>
-
+      <div class="content has-text-centered">
+        <p>
+          <strong>knowledge</strong> by
+          <a href="https://github.com/otoshimtoshi">Masatoshi Otoshi</a>. The
+          source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
